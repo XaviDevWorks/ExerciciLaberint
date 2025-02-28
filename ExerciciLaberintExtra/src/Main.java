@@ -6,18 +6,19 @@ public class Main {
     static int columnas = 12;
 
     private static void generarLaberint() {
-        Random rand = new Random();
+        Random random = new Random();
         laberint = new char[filas][columnas];
 
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
-                if (rand.nextInt(4) == 0) {
+                if (random.nextInt(4) == 0) {
                     laberint[i][j] = '#';
                 } else {
                     laberint[i][j] = ' ';
                 }
             }
         }
+
         laberint[0][0] = ' ';
         laberint[filas - 1][columnas - 1] = 'X';
     }
