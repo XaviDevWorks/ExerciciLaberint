@@ -37,7 +37,6 @@ public class Main {
                 (laberint[x][y] == ' ' || laberint[x][y] == 'X');
     }
 
-
     public static boolean resolLaberint(int x, int y) {
         if (!esValid(x, y)) return false;
         if (laberint[x][y] == 'X') return true;
@@ -46,10 +45,10 @@ public class Main {
         imprimirLaberint();
         esperar(100);
 
-        if (    resolLaberint(x, y + 1) || // Dreta
-                resolLaberint(x + 1, y) || // Avall
-                resolLaberint(x, y - 1) || // Esquerra
-                resolLaberint(x - 1, y))   // Amunt
+        if (    resolLaberint(x, y + 1) ||
+                resolLaberint(x + 1, y) ||
+                resolLaberint(x, y - 1) ||
+                resolLaberint(x - 1, y))
         {
             return true;
         }
