@@ -48,15 +48,14 @@ public class Main {
         if (    resolLaberint(x, y + 1) ||
                 resolLaberint(x + 1, y) ||
                 resolLaberint(x, y - 1) ||
-                resolLaberint(x - 1, y))
-        {
+                resolLaberint(x - 1, y)) {
             return true;
         }
         else {
-        laberint[x][y] = '.';
-        imprimirLaberint();
-        esperar(100);
-        return false;
+            laberint[x][y] = '.';
+            imprimirLaberint();
+            esperar(100);
+            return false;
         }
     }
 
